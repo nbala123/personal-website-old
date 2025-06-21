@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+    --color-rosepine-base: #191724;
+    --color-rosepine-surface: #1f1d2e;
+    --color-rosepine-overlay: #26233a;
+    --color-rosepine-muted: #6e6a86;
+    --color-rosepine-subtle: #908caa;
+    --color-rosepine-text: #e0def4;
+    --color-rosepine-love: #eb6f92;
+    --color-rosepine-gold: #f6c177;
+    --color-rosepine-rose: #ebbcba;
+    --color-rosepine-pine: #31748f;
+    --color-rosepine-foam: #9ccfd8;
+    --color-rosepine-iris: #c4a7e7;
+    --color-rosepine-highlight-low: #21202e;
+    --color-rosepine-highlight-med: #403d52;
+    --color-rosepine-highlight-high: #524f67;
+}
+
+/* Chrome, Edge, and Safari scrollbar handling*/
+::-webkit-scrollbar {
+  width: 12px;
+  background: var(--color-rosepine-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-rosepine-rose);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rosepine-love)
+}
+
+/* Firefox scrollbar handling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-rosepine-rose) var(--color-rosepine-surface);
+}
+
+/* Highlight color */
+::selection {
+  background: #524f67b3; /* Highlight high with reduced alpha */
+  color: var(--color-rosepine-text);
+}
