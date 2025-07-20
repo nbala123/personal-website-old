@@ -1,72 +1,169 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/src">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
     <title>NIA | About Me</title>
-    <link href="/output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
   </head>
   <body class="overflow-x-hidden bg-rosepine-base">
-    <div class="group fixed top-0 left-0 h-screen w-16 bg-rosepine-base hover:w-64 hover:bg-rosepine-surface transition-all duration-300 flex flex-col z-50 ring-2 ring-rosepine-rose hover:ring-rosepine-love">
-      <a href="#" class="flex items-center px-4 py-5 text-rosepine-rose hover:text-rosepine-love bg-rosepine-overlay">
-          <div id="box" class="items-center justify-center">
-              <img src="/assets/icons/person.svg", style="scale: 150%; min-width: 32px; max-width: 32px;">
-          </div>  
-          <span class="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">About Me</span>
-      </a>
-      <a href="#" class="flex items-center px-4 py-5 text-rosepine-rose hover:text-rosepine-love hover:bg-rosepine-overlay">
-          <div id="box" class="items-center justify-center">
-              <img src="/assets/icons/atom.svg", style="scale: 150%; min-width: 32px; max-width: 32px;">
-          </div>  
-          <span class="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">STEM & Physics</span>
-      </a>
-      <a href="#" class="flex items-center px-4 py-5 text-rosepine-rose hover:text-rosepine-love hover:bg-rosepine-overlay">
-          <div id="box" class="items-center justify-center">
-              <img src="/assets/icons/robot.svg", style="scale: 150%; min-width: 32px; max-width: 32px;">
-          </div>
-          <span class="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Robotics</span>
-      </a>
-      <a href="#" class="flex items-center px-4 py-5 text-rosepine-rose hover:text-rosepine-love hover:bg-rosepine-overlay">
-          <div id="box" class="items-center justify-center">
-              <img src="/assets/icons/code.svg", style="scale: 150%; min-width: 32px; max-width: 32px;">
-          </div>
-          <span class="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Computer Science</span>
-      </a>
-      <a href="#" class="flex items-center px-4 py-5 text-rosepine-rose hover:text-rosepine-love hover:bg-rosepine-overlay">
-          <div id="box" class="items-center justify-center">
-              <img src="/assets/icons/podium.svg", style="scale: 150%; min-width: 32px; max-width: 32px;">
-          </div>  
-          <span class="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Speech & Debate</span>
-      </a>
-      <a href="#" class="flex items-center px-4 py-5 text-rosepine-rose hover:text-rosepine-love hover:bg-rosepine-overlay">
-          <div id="box" class="items-center justify-center">
-              <img src="/assets/icons/writing.svg", style="scale: 150%; min-width: 32px; max-width: 32px;">
-          </div>
-          <span class="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Creative Writing</span>
-      </a>
-            <a href="#" class="flex items-center px-4 py-5 text-rosepine-rose hover:text-rosepine-love hover:bg-rosepine-overlay">
-          <div id="box" class="items-center justify-center">
-              <img src="./assets/icons/cube.svg", style="scale: 150%; min-width: 32px; max-width: 32px;">
-          </div>
-          <span class="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">3D Work</span>
-      </a>
-      <a href="#" class="flex items-center px-4 py-5 text-rosepine-rose hover:text-rosepine-love hover:bg-rosepine-overlay">
-          <div id="box" class="items-center justify-center">
-              <img src="/assets/icons/award.svg", style="scale: 150%; min-width: 32px; max-width: 32px;">
-          </div>
-          <span class="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Awards & Certifications</span>
-      </a>
+    <!--Sidebar! All of this code is for the sidebar! Don't mess with it pleeeeeeeeeeease (note to self)-->
+    <div class="justify-between group/bar fixed top-0 left-0 h-screen w-18 bg-rosepine-base hover:w-66 hover:bg-rosepine-surface transition-all duration-300 flex flex-col z-50 ring-2 ring-rosepine-rose hover:ring-rosepine-love delay-150 p-1 ">
+        <!-- TOP wrapper--> 
+        <div>
+            <!--ABOUT ME-->
+            <!--Container-->
+            <div class="group/container flex flex-col items-start bg-rosepine-surface hover:bg-rosepine-overlay w-full rounded-lg">
+                <a href="" class="group/item flex items-center w-full px-4 pt-5 text-rosepine-rose hover:text-rosepine-love">
+                    <div class="items-center justify-center">
+                        <svg class="dynamic-svg w-8 h-8 text-rosepine-rose group-hover/item:text-rosepine-love scale-150 transition-transform duration-450 group-hover/container:-rotate-360 delay-150", data-svg="./assets/icons/person.svg"></svg>
+                    </div>
+                    <span class="ml-4 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">About Me</span>
+                </a>
+                <!--Dropdown-->
+                <div class="pb-5 w-full max-h-0 group-hover/container:max-h-32 overflow-hidden transition-all duration-300 rounded-b delay-150">
+                    <ul class="flex flex-col gap-1 pt-4">
+                        <!--Hobbies-->
+                        <a href="" class="group/item flex items-center opacity-0 group-hover/container:opacity-100 transition-opacity duration-200 delay-250 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/person.svg"></svg>
+                            Hobbies
+                        </a>
+                        <!--Interests-->
+                        <a href="" class="group/item flex items-center opacity-0 group-hover/container:opacity-100 transition-opacity duration-200 delay-350 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/person.svg"></svg>
+                            Interests
+                        </a>
+                        <!--Passions-->
+                        <a href="" class="group/item flex items-center opacity-0 group-hover/container:opacity-100 transition-opacity duration-200 delay-350 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/person.svg"></svg>
+                            Passions
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <!--STEM-->
+            <!--Container-->
+            <div class="group/container flex flex-col items-start hover:bg-rosepine-overlay w-full rounded-lg">
+                <a href="" class="group/item flex items-center w-full px-4 pt-5 text-rosepine-rose hover:text-rosepine-love">
+                    <div class="items-center justify-center">
+                        <svg class="dynamic-svg w-8 h-8 text-rosepine-rose group-hover/item:text-rosepine-love scale-150 transition-transform duration-450 group-hover/container:-rotate-360 delay-150", data-svg="./assets/icons/atom.svg"></svg>
+                    </div>
+                    <span class="ml-4 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">STEM</span>
+                </a>
+                <!--Dropdown-->
+                <div class="pb-5 w-full max-h-0 group-hover/container:max-h-40 overflow-hidden transition-all duration-300 rounded-b delay-150">
+                    <ul class="flex flex-col gap-1 pt-2">
+                        <!--Physics-->
+                        <a href="" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-250 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/atom.svg"></svg>
+                            Physics
+                        </a>
+                        <!--CS-->
+                        <a href="" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-350 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/code.svg"></svg>
+                            Computer Science
+                        </a>
+                        <!--Robot-->
+                        <a href="" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-450 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/robot.svg"></svg>
+                            Robotics
+                        </a>
+                        <!--3D-->
+                        <a href="" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-550 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/cube.svg"></svg>
+                            3D Animation
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <!--SPEECH?DEBAT-->
+            <!--Container-->
+            <div class="group/container flex flex-col items-start hover:bg-rosepine-overlay w-full rounded-lg">
+                <a href="" class="group/item flex items-center w-full px-4 pt-5 text-rosepine-rose hover:text-rosepine-love">
+                    <div class="items-center justify-center">
+                        <svg class="dynamic-svg w-8 h-8 text-rosepine-rose group-hover/item:text-rosepine-love scale-150 transition-transform duration-450 group-hover/container:-rotate-360 delay-150", data-svg="./assets/icons/podium.svg"></svg>
+                    </div>
+                    <span class="ml-4 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">Speech & Debate</span>
+                </a>
+                <!--Dropdown-->
+                <div class="pb-5 w-full max-h-0 group-hover/container:max-h-40 overflow-hidden transition-all duration-300 rounded-b">
+                    <ul class="flex flex-col gap-1 pt-2">
+                        <!--MUN-->
+                        <a href="" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-250 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/world.svg"></svg>
+                            Model United Nations
+                        </a>
+                        <!--YG-->
+                        <a href="" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-350 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/gov.svg"></svg>
+                            Youth & Government
+                        </a>
+                        <!--Speech-->
+                        <a href="" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-450 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75"", data-svg="./assets/icons/megaphone.svg"></svg>
+                            Public Speaking
+                        </a>
+                        <!--DECA-->
+                        <a href="" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-550 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/tie.svg"></svg>
+                            DECA
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+                    <!--Academics-->
+            <!--Container-->
+            <div class="group/container flex flex-col items-start hover:bg-rosepine-overlay w-full rounded-lg">
+                <a href="" class="group/item flex items-center w-full px-4 pt-5 text-rosepine-rose hover:text-rosepine-love">
+                    <div class="items-center justify-center">
+                        <svg class="dynamic-svg w-8 h-8 text-rosepine-rose group-hover/item:text-rosepine-love scale-150 transition-transform duration-450 group-hover/container:-rotate-360 delay-150", data-svg="./assets/icons/writing.svg"></svg>
+                    </div>
+                    <span class="ml-4 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">Academics</span>
+                </a>
+                <!--Dropdown-->
+                <div class="pb-5 w-full max-h-0 group-hover/container:max-h-40 overflow-hidden transition-all duration-300 rounded-b">
+                    <ul class="flex flex-col gap-1 pt-2">
+                        <!--classe-->
+                        <a href="" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-250 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/course.svg"></svg>
+                            Courses
+                        </a>
+                        <!--Scores-->
+                        <a href="" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-350 text-rosepine-rose hover:text-rosepine-love">
+                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="./assets/icons/award.svg"></svg>
+                            Scores
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+
+            
+        </div>
+
+        <!--Bottom wrapper-->
+        <div class="flex flex-col w-full items-center justify-center">
+            <a href="" class="group/item">
+                <div class="flex w-fit px-4 pb-5 text-rosepine-rose hover:text-rosepine-love hover:bg-rosepine-overlay rounded-lg">
+                    <svg class="dynamic-svg w-8 h-8 text-rosepine-rose group-hover/item:text-rosepine-love scale-100 transition-transform duration-300 translate-x-11 group-hover/bar:translate-x-0 delay-150", data-svg="./assets/icons/person.svg"></svg>
+                    <span class="ml-2 translate-y-0.5 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">Contact Me</span>
+                </div>
+            </a>
+        </div>
     </div>
+
     <!--Main stuff-->
     <div class="overflow-y-auto ml-16 p-16 w-[calc(100vw-4rem)] h-screen">
-      <h1 class="text-8xl font-bold text-center text-rosepine-rose wrap-break-word">
+      <h1 class="text-6xl font-bold text-center text-rosepine-rose wrap-break-word">
         Hello World!EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
       </h1>
       <div class="flex justify-center items-center">
-        <model-viewer src="/assets/models/spaceship.glb"
+        <model-viewer src="./assets/models/spaceship.glb"
                       auto-rotate
                       camera-controls
                       autoplay
@@ -78,11 +175,32 @@
         </model-viewer>
       </div>
     </div>
-
-    <!--Script (limited, just for proper animation funtionality)-->
-    <script>
-
-    </script>
   </body>
+    <script>
+        async function injectSVGs(selector) {
+            const elements = document.querySelectorAll(selector);
+            for (const el of elements) {
+                const svgUrl = el.dataset.svg;
+                if (!svgUrl) continue;
+                const res = await fetch(svgUrl);
+                const svgText = await res.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(svgText, "image/svg+xml");
+                const svgSource = doc.querySelector('svg');
+                if (!svgSource) continue;
+                // Copy over all paths
+                el.innerHTML = svgSource.innerHTML;
+                // Copy over viewBox and other attributes
+                if (svgSource.hasAttribute('viewBox')) el.setAttribute('viewBox', svgSource.getAttribute('viewBox'));
+                // Apply your classes and attributes
+                el.setAttribute('fill', 'currentColor');
+            }
+        }
+
+        // Usage: Add <svg class="dynamic-svg w-8 h-8 text-rosepine-rose group-hover/item:text-rosepine-love" data-svg="./assets/icons/person.svg"></svg>
+        document.addEventListener('DOMContentLoaded', () => {
+            injectSVGs('svg.dynamic-svg');
+        });
+    </script>
 </html>
 
