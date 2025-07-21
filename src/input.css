@@ -42,3 +42,35 @@
   background: #524f67b3; /* Highlight high with reduced alpha */
   color: var(--color-rosepine-text);
 }
+
+@layer utilities {
+  @keyframes swipeIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes swipeOut {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .swipe-transition {
+    @apply fixed top-0 left-0 w-full h-full z-50;
+  }
+
+  .animate-swipe-in {
+    animation: swipeIn 0.6s ease-out forwards;
+  }
+
+  .animate-swipe-out {
+    animation: swipeOut 0.6s ease-in forwards;
+  }
+}
