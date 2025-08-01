@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-    fetch('/sidebar.html') // Always fetch from root, regardless of current page
+    fetch('../sidebar.html')
     .then(response => {
         if (!response.ok) throw new Error('Failed to load sidebar');
         return response.text();
