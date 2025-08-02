@@ -9,12 +9,24 @@
   </head>
   <body class="overflow-x-hidden bg-rosepine-base">
     <!--Sidebar-->
-    <div id="sidebar"></div>
+    <div id="sidebar" class="fixed z-50"></div>
     <!--Main Body-->
-    <div class="overflow-y-auto ml-16 px-16 py-8 w-[calc(100vw-4rem)] h-screen">
+    <div class="overflow-y-auto ml-16 px-16 py-8 w-[calc(100vw-4.5rem)] h-screen">
       <h1 class="text-6xl font-bold text-center text-rosepine-rose wrap-break-word">
         About Me
       </h1>
     </div>
+    
+
+    <div id="transition-box" class="right-0 top-0 fixed w-[calc(100vw-4.5rem)] h-full z-20 bg-rosepine-surface/20 backdrop-blur-lg transition-transform duration-1000"></div>
+    <script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const transitionBox = document.getElementById("transition-box");
+
+        setTimeout(() => {
+            transitionBox.classList.add("translate-x-full");
+        }, 50);
+    });
+    </script>
   </body>
 </html>

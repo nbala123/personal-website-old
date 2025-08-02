@@ -12,6 +12,10 @@ window.addEventListener('DOMContentLoaded', () => {
         console.error(err);
         document.getElementById('sidebar').innerHTML = '<p>Sidebar failed to load.</p>';
     });
+
+            const transitionBox = document.getElementById("transition-box");
+        // Force a reflow to ensure transition works (optional but safer)
+        transitionBox.classList.replace("translate-x-0", "translate-x-full");
 });
 
 async function injectSVGs(selector) {

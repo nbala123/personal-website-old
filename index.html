@@ -1,7 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="refresh" content="0; url=./about-me"/>
-    <title></title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Nia</title>
+        <link href="./src/output.css" rel="stylesheet">
+    </head>
+    <body class="overflow-x-hidden bg-rosepine-base">
+        <div id="quote-container" class="flex flex-col relative w-screen h-screen z-0 items-center justify-center blur-2xl duration-750">
+            <p id="quote" class="text-rosepine-rose text-3xl px-20 text-center">...</p>
+            <div class="h-8"></div>
+            <p id="author" class="text-rosepine-rose text-2xl font-bold text-center">---</p>
+        </div>
+
+        <!--Non-func sidebar-->
+        <div id="sidebar" class="fixed top-0 left-0 h-screen justify-between w-18 bg-rosepine-base flex-col z-50 ring-2 ring-rosepine-rose transform transition-transform -translate-x-full duration-750"></div>
+        
+        <div id="transition-box" class="right-0 top-0 fixed w-[calc(100vw-4.5rem)] h-full z-20 bg-rosepine-surface/20 backdrop-blur-lg transition-transform translate-x-full duration-1000"></div>
+        <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const transitionBox = document.getElementById("transition-box");
+            const sidebar = document.getElementById("sidebar");
+
+            const quoteContainer = document.getElementById("quote-container");
+            const quote = document.getElementById("quote");
+            const author = document.getElementById("author");
+
+            const quotes = [
+                { text: "The most incomprehensible thing about the world is that it is comprehensible.", author: "Albert Einstein" },
+                { text: "Somewhere, something incredible is waiting to be known.", author: "Carl Sagan" },
+                { text: "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.", author: "Marie Curie" },
+                { text: "If I have seen further it is by standing on the shoulders of giants.", author: "Isaac Netwon" }
+            ];
+            
+            setTimeout(() => {
+                const random = quotes[Math.floor(Math.random() * quotes.length)];
+                document.getElementById("quote").textContent = `"${random.text}"`;
+                document.getElementById("author").textContent = `— ${random.author}`;
+
+            }, 0);
+
+            setTimeout(() => {
+                quoteContainer.classList.replace("blur-2xl", "blur-none");
+            }, 100);
+
+            setTimeout(() => {
+                transitionBox.classList.replace("translate-x-full", "translate-x-0");
+                sidebar.classList.replace("-translate-x-full", "translate-x-0");
+            }, 3000);
+            
+            setTimeout(() => {
+                window.location.href = "/about-me/";
+            }, 4500)
+        });
+        </script>
+    </body>
 </html>
