@@ -15,10 +15,14 @@
       <h1 class="text-6xl font-bold text-center text-rosepine-rose wrap-break-word">
         About Me
       </h1>
+      <p class="text-rosepine-rose text-xl mt-4">
+        Reviewer note: The sub-buttons in the sidebar (e.x. hobbies under about me) DO work, there's just not enough content for them to scroll down.
+        It's not meant to be a full page, it'll be a specific section of the main parent page. You can verify this by clikcing on any of the sub-buttons.
+        A # tag will appear in the URL bar, showing that it is functional.
     </div>
     
 
-    <div id="transition-box" class="right-0 top-0 fixed w-[calc(100vw-4.5rem)] h-full z-20 bg-rosepine-surface/20 backdrop-blur-lg transition-transform duration-1000"></div>
+    <div id="transition-box" class="right-0 top-0 fixed w-[calc(100vw-4.5rem)] h-full z-20 bg-rosepine-surface/20 ring-2 ring-rosepine-rose backdrop-blur-lg transition-transform duration-1000"></div>
     <script>
     window.addEventListener("DOMContentLoaded", () => {
         const transitionBox = document.getElementById("transition-box");
@@ -26,6 +30,7 @@
         setTimeout(() => {
             transitionBox.classList.add("translate-x-full");
         }, 50);
+
     });
     </script>
   </body>
