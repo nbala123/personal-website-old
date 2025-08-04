@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const background = document.getElementById('background');
 
     setTimeout(() => {
-        fetch('/\/[^/]*$//background.html')
+        fetch('../background.html')
     .then(response => {
         if (!response.ok) throw new Error('Failed to load background');
         return response.text();
