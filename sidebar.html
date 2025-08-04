@@ -1,33 +1,33 @@
 <!--Sidebar! All of this code is for the sidebar! Don't mess with it pleeeeeeeeeeease (note to self)-->
 <div class="fixed top-0 left-0 h-screen w-screen pointer-events-none">
-    <div class="justify-between group/bar h-screen w-18 bg-rosepine-base hover:w-66 hover:bg-rosepine-surface transition-all duration-300 flex flex-col z-50 ring-2 ring-rosepine-rose hover:ring-rosepine-love delay-150 p-1 pointer-events-auto">
+    <div class="justify-between group/bar h-screen w-18 hover:w-66 bg-rosepine-dawn-surface/20 dark:bg-rosepine-surface/10 backdrop-blur-sm transition-all duration-300 flex flex-col z-50 ring-2 ring-rosepine-dawn-rose hover:ring-rosepine-dawn-love dark:ring-rosepine-rose dark:hover:ring-rosepine-love delay-150 p-1 pointer-events-auto">
         <!-- TOP wrapper--> 
         <div>
             <!--ABOUT ME-->
             <!--Container-->
-            <div class="group/container flex flex-col items-start bg-rosepine-surface hover:bg-rosepine-overlay w-full rounded-lg">
-                <a href="../about-me/" class="group/item flex items-center w-full px-4 pt-5 text-rosepine-rose hover:text-rosepine-love">
+            <div class="sidebar-container group/container">
+                <a href="../about-me/" class="group/item sidebar-parent-link">
                     <div class="items-center justify-center">
-                        <svg class="dynamic-svg w-8 h-8 fill-rosepine-rose group-hover/item:fill-rosepine-love scale-150 transition-transform duration-600 group-hover/container:-rotate-360 delay-150", data-svg="../src/assets/icons/person.svg"></svg>
+                        <svg class="dynamic-svg sidebar-parent-link-icon", data-svg="../src/assets/icons/person.svg"></svg>
                     </div>
-                    <span class="ml-4 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">About Me</span>
+                    <span class="sidebar-parent-link-text">About Me</span>
                 </a>
                 <!--Dropdown-->
-                <div class="pb-5 w-full max-h-0 group-hover/container:max-h-32 overflow-hidden transition-all duration-300 rounded-b delay-150">
+                <div class="sidebar-dropdown-container">
                     <ul class="flex flex-col gap-1 pt-4">
                         <!--Hobbies-->
-                        <a href="../about-me/#hobbies" class="group/item flex items-center opacity-0 group-hover/container:opacity-100 transition-opacity duration-200 delay-250 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 fill-rosepine-rose group-hover/item:fill-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/person.svg"></svg>
+                        <a href="../about-me/#hobbies" class="group/item sidebar-child-link delay-250">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/person.svg"></svg>
                             Hobbies
                         </a>
                         <!--Interests-->
-                        <a href="../about-me/#interests" class="group/item flex items-center opacity-0 group-hover/container:opacity-100 transition-opacity duration-200 delay-350 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 fill-rosepine-rose group-hover/item:fill-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/person.svg"></svg>
+                        <a href="../about-me/#interests" class="group/item sidebar-child-link delay-350">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/person.svg"></svg>
                             Interests
                         </a>
                         <!--Passions-->
-                        <a href="../about-me/#passions" class="group/item flex items-center opacity-0 group-hover/container:opacity-100 transition-opacity duration-200 delay-350 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 fill-rosepine-rose group-hover/item:fill-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/person.svg"></svg>
+                        <a href="../about-me/#passions" class="group/item sidebar-child-link delay-450">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/person.svg"></svg>
                             Passions
                         </a>
                     </ul>
@@ -36,34 +36,33 @@
 
             <!--STEM-->
             <!--Container-->
-            <div class="group/container flex flex-col items-start hover:bg-rosepine-overlay w-full rounded-lg">
-                <a href="../stem/" class="group/item flex items-center w-full px-4 pt-5 text-rosepine-rose hover:text-rosepine-love">
+            <div class="sidebar-container group/container">
+                <a href="../about-me/" class="group/item sidebar-parent-link">
                     <div class="items-center justify-center">
-                        <svg class="dynamic-svg w-8 h-8 fill-rosepine-rose group-hover/item:fill-rosepine-love scale-150 transition-transform duration-600 group-hover/container:-rotate-360 delay-150", data-svg="../src/assets/icons/atom.svg"></svg>
+                        <svg class="dynamic-svg sidebar-parent-link-icon", data-svg="../src/assets/icons/atom.svg"></svg>
                     </div>
-                    <span class="ml-4 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">STEM</span>
+                    <span class="sidebar-parent-link-text">STEM</span>
                 </a>
                 <!--Dropdown-->
-                <div class="pb-5 w-full max-h-0 group-hover/container:max-h-40 overflow-hidden transition-all duration-300 rounded-b delay-150">
-                    <ul class="flex flex-col gap-1 pt-2">
-                        <!--Physics-->
-                        <a href="../stem/#physics" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-250 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 fill-rosepine-rose group-hover/item:fill-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/atom.svg"></svg>
+                <div class="sidebar-dropdown-container">
+                    <ul class="flex flex-col gap-1 pt-4">
+                        <!--Hobbies-->
+                        <a href="../about-me/#hobbies" class="group/item sidebar-child-link delay-250">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/atom.svg"></svg>
                             Physics
                         </a>
-                        <!--CS-->
-                        <a href="../stem/#cs" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-350 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 fill-rosepine-rose group-hover/item:fill-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/code.svg"></svg>
-                            Computer Science
-                        </a>
-                        <!--Robot-->
-                        <a href="../stem/#robotics" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-450 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 fill-rosepine-rose group-hover/item:fill-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/robot.svg"></svg>
+                        <!--Interests-->
+                        <a href="../about-me/#interests" class="group/item sidebar-child-link delay-350">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/robot.svg"></svg>
                             Robotics
                         </a>
-                        <!--3D-->
-                        <a href="../stem/#3D" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-550 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 fill-rosepine-rose group-hover/item:fill-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/cube.svg"></svg>
+                        <!--Passions-->
+                        <a href="../about-me/#passions" class="group/item sidebar-child-link delay-450">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/code.svg"></svg>
+                            Computer Science
+                        </a>
+                        <a href="../about-me/#passions" class="group/item sidebar-child-link delay-550">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/cube.svg"></svg>
                             3D Animation
                         </a>
                     </ul>
@@ -72,34 +71,34 @@
 
             <!--SPEECH?DEBAT-->
             <!--Container-->
-            <div class="group/container flex flex-col items-start hover:bg-rosepine-overlay w-full rounded-lg">
-                <a href="../speech/" class="group/item flex items-center w-full px-4 pt-5 text-rosepine-rose hover:text-rosepine-love">
+            <div class="sidebar-container group/container">
+                <a href="../about-me/" class="group/item sidebar-parent-link">
                     <div class="items-center justify-center">
-                        <svg class="dynamic-svg w-8 h-8 text-rosepine-rose group-hover/item:text-rosepine-love scale-150 transition-transform duration-600 group-hover/container:-rotate-360 delay-150", data-svg="../src/assets/icons/podium.svg"></svg>
+                        <svg class="dynamic-svg sidebar-parent-link-icon", data-svg="../src/assets/icons/podium.svg"></svg>
                     </div>
-                    <span class="ml-4 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">Speech & Debate</span>
+                    <span class="sidebar-parent-link-text">Speech & Debate</span>
                 </a>
                 <!--Dropdown-->
-                <div class="pb-5 w-full max-h-0 group-hover/container:max-h-40 overflow-hidden transition-all duration-300 rounded-b">
-                    <ul class="flex flex-col gap-1 pt-2">
-                        <!--MUN-->
-                        <a href="../speech/#mun" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-250 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/world.svg"></svg>
+                <div class="sidebar-dropdown-container">
+                    <ul class="flex flex-col gap-1 pt-4">
+                        <!--mun-->
+                        <a href="../about-me/#hobbies" class="group/item sidebar-child-link delay-250">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/world.svg"></svg>
                             Model United Nations
                         </a>
-                        <!--YG-->
-                        <a href="../speech/#yg" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-350 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/gov.svg"></svg>
+                        <!--yg-->
+                        <a href="../about-me/#interests" class="group/item sidebar-child-link delay-350">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/gov.svg"></svg>
                             Youth & Government
                         </a>
-                        <!--Speech-->
-                        <a href="../speech/#spech" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-450 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75"", data-svg="../src/assets/icons/megaphone.svg"></svg>
+                        <!--speech-->
+                        <a href="../about-me/#passions" class="group/item sidebar-child-link delay-450">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/megaphone.svg"></svg>
                             Public Speaking
                         </a>
-                        <!--DECA-->
-                        <a href="../speech/#deca" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-550 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/tie.svg"></svg>
+                        <!--deca-->
+                        <a href="../about-me/#passions" class="group/item sidebar-child-link delay-550">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/tie.svg"></svg>
                             DECA
                         </a>
                     </ul>
@@ -108,24 +107,24 @@
 
                     <!--Academics-->
             <!--Container-->
-            <div class="group/container flex flex-col items-start hover:bg-rosepine-overlay w-full rounded-lg">
-                <a href="../academics/" class="group/item flex items-center w-full px-4 pt-5 text-rosepine-rose hover:text-rosepine-love">
+            <div class="sidebar-container group/container">
+                <a href="../about-me/" class="group/item sidebar-parent-link">
                     <div class="items-center justify-center">
-                        <svg class="dynamic-svg w-8 h-8 text-rosepine-rose group-hover/item:text-rosepine-love scale-150 transition-transform duration-600 group-hover/container:-rotate-360 delay-150", data-svg="../src/assets/icons/writing.svg"></svg>
+                        <svg class="dynamic-svg sidebar-parent-link-icon", data-svg="../src/assets/icons/person.svg"></svg>
                     </div>
-                    <span class="ml-4 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">Academics</span>
+                    <span class="sidebar-parent-link-text">Academics</span>
                 </a>
                 <!--Dropdown-->
-                <div class="pb-5 w-full max-h-0 group-hover/container:max-h-40 overflow-hidden transition-all duration-300 rounded-b">
-                    <ul class="flex flex-col gap-1 pt-2">
-                        <!--classe-->
-                        <a href="../academics/#classes" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-250 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/course.svg"></svg>
+                <div class="sidebar-dropdown-container">
+                    <ul class="flex flex-col gap-1 pt-4">
+                        <!--courses-->
+                        <a href="../about-me/#hobbies" class="group/item sidebar-child-link delay-250">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/course.svg"></svg>
                             Courses
                         </a>
-                        <!--Scores-->
-                        <a href="../academics/#scores" class="group/item flex items-center opacity-0 translate-y-2 group-hover/container:opacity-100 transition-opacity duration-200 delay-350 text-rosepine-rose hover:text-rosepine-love">
-                            <svg class="dynamic-svg w-8 h-8 mx-4 text-rosepine-rose group-hover/item:text-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75", data-svg="../src/assets/icons/award.svg"></svg>
+                        <!--scores-->
+                        <a href="../about-me/#interests" class="group/item sidebar-child-link delay-350">
+                            <svg class="dynamic-svg sidebar-child-link-icon", data-svg="../src/assets/icons/award.svg"></svg>
                             Scores
                         </a>
                     </ul>
@@ -138,13 +137,22 @@
 
         <!--Bottom wrapper-->
         <div class="flex flex-col w-full items-center justify-center">
-            <a href="mailto:balanickhil@gmail.com" class="group/item">
-                <div class="flex w-fit px-4 pb-5 text-rosepine-rose hover:text-rosepine-love hover:bg-rosepine-overlay rounded-lg">
-                    <svg class="dynamic-svg w-8 h-8 text-rosepine-rose group-hover/item:text-rosepine-love scale-100 transition-transform duration-300 translate-x-11 group-hover/bar:translate-x-0 delay-150", data-svg="../src/assets/icons/person.svg"></svg>
-                    <span class="ml-2 translate-y-0.5 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">Contact Me</span>
+            <!--code from https://flowbite.com/docs/forms/toggle/ <3-->
+            <label class="flex flex-row items-center justify-center cursor-pointer my-4">
+                <input id="dark-mode-toggle" type="checkbox" value="" class="sr-only peer" checked>
+                <div class="relative w-11 h-6 bg-rosepine-dawn-surface rounded-full peer dark:bg-rosepine-surface peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-rosepine-dawn-rose dark:peer-checked:bg-rosepine-love"></div>
+                <span class="ml-2 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150 text-rosepine-rose">Light/Dark Mode</span>
+            </label>
+
+
+            <a href="mailto:balanickhil@gmail.com" class="group/item my-4">
+                <div class="flex items-center justify-center w-fit px-4 pb-5 text-rosepine-rose hover:text-rosepine-love hover:bg-rosepine-overlay rounded-lg">
+                    <svg class="dynamic-svg w-8 h-8 text-rosepine-rose hover:text-rosepine-love scale-100 transition-transform duration-300 translate-x-11 group-hover/bar:translate-x-0 delay-150", data-svg="../src/assets/icons/person.svg"></svg>
+                    <span class="ml-2 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150">Contact Me</span>
                 </div>
             </a>
         </div>
-
+<script>
+</script>
     </div>
 </div>

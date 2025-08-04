@@ -1,22 +1,87 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-rosepine-base: #191724;
-    --color-rosepine-surface: #1f1d2e;
-    --color-rosepine-overlay: #26233a;
-    --color-rosepine-muted: #6e6a86;
-    --color-rosepine-subtle: #908caa;
-    --color-rosepine-text: #e0def4;
-    --color-rosepine-love: #eb6f92;
-    --color-rosepine-gold: #f6c177;
-    --color-rosepine-rose: #ebbcba;
-    --color-rosepine-pine: #31748f;
-    --color-rosepine-foam: #9ccfd8;
-    --color-rosepine-iris: #c4a7e7;
-    --color-rosepine-highlight-low: #21202e;
-    --color-rosepine-highlight-med: #403d52;
-    --color-rosepine-highlight-high: #524f67;
+  /* Rosé Pine (main) */
+  --color-rosepine-base: #191724;
+  --color-rosepine-surface: #1f1d2e;
+  --color-rosepine-overlay: #26233a;
+  --color-rosepine-muted: #6e6a86;
+  --color-rosepine-subtle: #908caa;
+  --color-rosepine-text: #e0def4;
+  --color-rosepine-love: #eb6f92;
+  --color-rosepine-gold: #f6c177;
+  --color-rosepine-rose: #ebbcba;
+  --color-rosepine-pine: #31748f;
+  --color-rosepine-foam: #9ccfd8;
+  --color-rosepine-iris: #c4a7e7;
+  --color-rosepine-highlight-low: #21202e;
+  --color-rosepine-highlight-med: #403d52;
+  --color-rosepine-highlight-high: #524f67;
+
+  /* Rosé Pine Dawn */
+  --color-rosepine-dawn-base: #faf4ed;
+  --color-rosepine-dawn-surface: #fffaf3;
+  --color-rosepine-dawn-overlay: #f2e9de;
+  --color-rosepine-dawn-muted: #9893a5;
+  --color-rosepine-dawn-subtle: #797593;
+  --color-rosepine-dawn-text: #575279;
+  --color-rosepine-dawn-love: #b4637a;
+  --color-rosepine-dawn-gold: #ea9d34;
+  --color-rosepine-dawn-rose: #d7827e;
+  --color-rosepine-dawn-pine: #286983;
+  --color-rosepine-dawn-foam: #56949f;
+  --color-rosepine-dawn-iris: #907aa9;
+  --color-rosepine-dawn-highlight-low: #f4ede8;
+  --color-rosepine-dawn-highlight-med: #dfdad9;
+  --color-rosepine-dawn-highlight-high: #cecacd;
 }
+
+.sidebar-container{
+  @apply flex flex-col py-5 items-start bg-transparent hover:bg-rosepine-dawn-overlay/40 dark:hover:bg-rosepine-overlay/40 hover:backdrop-blur-sm w-full rounded-lg;
+}
+
+.sidebar-parent-link{
+  @apply flex items-center w-full px-4 dark:text-rosepine-rose dark:hover:text-rosepine-love text-rosepine-dawn-rose hover:text-rosepine-dawn-love;
+}
+
+.sidebar-parent-link-text{
+  @apply ml-4 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300 whitespace-nowrap delay-150
+}
+
+.sidebar-parent-link-icon{
+  @apply w-8 h-8 fill-rosepine-dawn-rose group-hover/item:fill-rosepine-dawn-love dark:fill-rosepine-rose dark:group-hover/item:fill-rosepine-love scale-150 transition-transform duration-600 delay-150 group-hover/container:-rotate-360;
+}
+
+.sidebar-child-link{
+  @apply flex items-center blur-xs group-hover/container:blur-none transition-[filter] duration-200 dark:text-rosepine-rose dark:hover:text-rosepine-love text-rosepine-dawn-rose hover:text-rosepine-dawn-love;
+}
+
+.sidebar-child-link-icon{
+  @apply flex w-8 h-8 mx-4 fill-rosepine-dawn-rose group-hover/item:fill-rosepine-dawn-love dark:fill-rosepine-rose dark:group-hover/item:fill-rosepine-love transition-transform duration-300 group-hover/item:translate-x-3 scale-75;
+}
+
+.sidebar-dropdown-container{
+  @apply flex w-full max-h-0 group-hover/container:max-h-64 overflow-hidden transition-all duration-300 rounded-b delay-150;
+}
+
+
+.gradient-outline {
+  background: linear-gradient(45deg, var(--color-rosepine-dawn-rose), var(--color-rosepine-dawn-iris), var(--color-rosepine-dawn-foam));
+  border-radius: 1rem;
+  mask: 
+    /* Outer rectangle */
+    linear-gradient(black, black) padding-box,
+    /* Inner rectangle to cut out */
+    linear-gradient(black, black) content-box;
+  mask-composite: subtract;
+  -webkit-mask: 
+    linear-gradient(black, black) padding-box,
+    linear-gradient(black, black) content-box;
+  -webkit-mask-composite: xor;
+  padding: 3px; /* Border thickness */
+}
+
 
 /* Chrome, Edge, and Safari scrollbar handling*/
 ::-webkit-scrollbar {
@@ -41,36 +106,4 @@
 ::selection {
   background: #524f67b3; /* Highlight high with reduced alpha */
   color: var(--color-rosepine-text);
-}
-
-@layer utilities {
-  @keyframes swipeIn {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-
-  @keyframes swipeOut {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-
-  .swipe-transition {
-    @apply fixed top-0 left-0 w-full h-full z-50;
-  }
-
-  .animate-swipe-in {
-    animation: swipeIn 0.6s ease-out forwards;
-  }
-
-  .animate-swipe-out {
-    animation: swipeOut 0.6s ease-in forwards;
-  }
 }

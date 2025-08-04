@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8">
-        <title>Nia</title>
+        <title>--</title>
         <link href="./src/output.css" rel="stylesheet">
+        <script src="./backgroundLoader.js"></script>
     </head>
-    <body class="overflow-x-hidden bg-rosepine-base">
-        <div id="quote-container" class="flex flex-col relative w-screen h-screen z-0 items-center justify-center blur-2xl duration-750">
-            <p id="quote" class="text-rosepine-rose text-3xl px-20 text-center">...</p>
+    <body class="overflow-x-hidden bg-rosepine-dawn-base dark:bg-rosepine-base">
+
+        <div id="background" class="fixed top-0 left-0 w-screen h-screen -z-10"></div>
+
+
+        <div id="quote-container" class="select-none flex flex-col relative w-screen h-screen z-0 items-center justify-center blur-2xl duration-750">
+            <p id="quote" class="text-rosepine-dawn-rose dark:text-rosepine-rose text-3xl px-20 text-center">...</p>
             <div class="h-8"></div>
-            <p id="author" class="text-rosepine-rose text-2xl font-bold text-center">---</p>
+            <p id="author" class="text-rosepine-dawn-rose dark:text-rosepine-rose text-2xl font-bold text-center">---</p>
         </div>
 
+        <div class="fixed bottom-0 items-center w-full h-fit text-rosepine-dawn-rose dark:text-rosepine-rose text-md mb-10 text-center z-10">Hold [SHIFT] to wait</div>
+
         <!--Non-func sidebar-->
-        <div id="sidebar" class="fixed top-0 left-0 h-screen justify-between w-18 bg-rosepine-base flex-col z-50 ring-2 ring-rosepine-rose transform transition-transform -translate-x-full duration-750"></div>
+        <div id="sidebar" class="fixed top-0 left-0 h-screen justify-between w-18 bg-rosepine-dawn-surface/20 dark:bg-rosepine-surface/20 backdrop-blur-sm flex-col z-50 ring-2 ring-rosepine-dawn-rose dark:ring-rosepine-rose transform transition-transform -translate-x-full duration-1000"></div>
         
-        <div id="transition-box" class="right-0 top-0 fixed w-[calc(100vw-4.5rem)] h-full z-20 ring-2 ring-rosepine-rose bg-rosepine-surface/20 backdrop-blur-lg transition-transform translate-x-full duration-1000"></div>
+        <div id="transition-box" class="right-0 top-0 fixed w-[calc(100vw-4.5rem)] h-full z-20 ring-2 bg-rosepine-dawn-surface/20 ring-rosepine-dawn-rose dark:bg-rosepine-surface/20 dark:ring-rosepine-rose backdrop-blur-lg transition-transform translate-x-full duration-1000"></div>
         <script>
         window.addEventListener("DOMContentLoaded", () => {
             const transitionBox = document.getElementById("transition-box");
@@ -58,6 +65,16 @@
             setTimeout(() => {
                 window.location.href = window.location.pathname.replace(/\/[^/]*$/, "/about-me/");
             }, 4500)
+
+
+
+
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
         });
         </script>
     </body>

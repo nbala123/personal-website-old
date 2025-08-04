@@ -1,28 +1,48 @@
 <!doctype html>
-<html>
+<html class="dark">
   <head>
     <meta charset="UTF-8">
-    <title>Nia | About Me</title>
+    <title>-- | About Me</title>
     <link href="../src/output.css" rel="stylesheet">
     <script src="../sidebarLoader.js"></script>
+    <script src="../backgroundLoader.js"></script>
+
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
 
   </head>
-  <body class="overflow-x-hidden bg-rosepine-base">
+  <body class="overflow-x-hidden bg-rosepine-dawn-base dark:bg-rosepine-base duration-1000">
+    
+    <div id="background"></div>
     <!--Sidebar-->
     <div id="sidebar" class="fixed z-50"></div>
     <!--Main Body-->
-    <div class="overflow-y-auto ml-16 px-16 py-8 w-[calc(100vw-4.5rem)] h-screen">
-      <h1 class="text-6xl font-bold text-center text-rosepine-rose wrap-break-word">
-        About Me
-      </h1>
-      <p class="text-rosepine-rose text-xl mt-4">
-        Reviewer note: The sub-buttons in the sidebar (e.x. hobbies under about me) DO work, there's just not enough content for them to scroll down.
-        It's not meant to be a full page, it'll be a specific section of the main parent page. You can verify this by clikcing on any of the sub-buttons.
-        A # tag will appear in the URL bar, showing that it is functional.
+    <div class="flex flex-col overflow-y-auto ml-16 px-16 py-4 w-[calc(100vw-4.5rem)] h-screen items-center">
+
+        <div class="flex flex-col items-center w-fit h-fit rounded-2xl px-8 py-4 bg-rosepine-dawn-surface/20 dark:bg-rosepine-surface/20 backdrop-blur-sm">
+            <div class="opacity-50 dark:opacity-100 absolute inset-0 gradient-outline"></div>
+            <h1 class="z-10 select-none fixed blur-none dark:blur-sm text-6xl w-fit font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-rosepine-dawn-rose to-rosepine-dawn-foam via-rosepine-dawn-iris wrap-break-word">
+                About Me
+            </h1>
+            <h1 class="z-20 text-6xl w-fit font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-rosepine-dawn-rose dark:from-rosepine-rose to-rosepine-dawn-foam dark:to-rosepine-foam via-rosepine-dawn-iris dark:via-rosepine-iris wrap-break-word">
+                About Me
+            </h1>
+            <p class="z-20 text-rosepine-dawn-foam dark:text-rosepine-foam text-xl mt-4">
+                Reviewer note: The sub-buttons in the sidebar (e.x. hobbies under about me) DO work, there's just not enough content for them to scroll down.
+                It's not meant to be a full page, it'll be a specific section of the main parent page. You can verify this by clikcing on any of the sub-buttons.
+                A # tag will appear in the URL bar, showing that it is functional. </p>
+
+        </div>
+
+
+ 
     </div>
     
 
-    <div id="transition-box" class="right-0 top-0 fixed w-[calc(100vw-4.5rem)] h-full z-20 bg-rosepine-surface/20 ring-2 ring-rosepine-rose backdrop-blur-lg transition-transform duration-1000"></div>
+    <div id="transition-box" class="right-0 top-0 fixed w-[calc(100vw-4.5rem)] h-full z-20 bg-rosepine-dawn-surface/20 ring-rosepine-dawn-rose dark:bg-rosepine-surface/20 ring-2 dark:ring-rosepine-rose backdrop-blur-lg transition-transform duration-1000"></div>
     <script>
     window.addEventListener("DOMContentLoaded", () => {
         const transitionBox = document.getElementById("transition-box");
@@ -30,8 +50,8 @@
         setTimeout(() => {
             transitionBox.classList.add("translate-x-full");
         }, 50);
-
     });
+
     </script>
   </body>
 </html>
