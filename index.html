@@ -40,7 +40,7 @@
             <p id="author" class="text-rosepine-dawn-rose dark:text-rosepine-rose text-2xl font-bold text-center">---</p>
         </div>
 
-        <div class="fixed bottom-0 items-center w-full h-fit text-rosepine-dawn-rose dark:text-rosepine-rose text-md mb-10 text-center z-10">Hold [SHIFT] to wait</div>
+        <div class="fixed bottom-0 items-center w-full h-fit text-rosepine-dawn-rose dark:text-rosepine-rose text-md mb-10 text-center z-10">INACTIVE --> Hold [SHIFT] to wait <-- INACTIVE</div>
 
         <!--Non-func sidebar-->
         <div id="sidebar" class="fixed top-0 left-0 h-screen justify-between w-18 bg-rosepine-dawn-surface/20 dark:bg-rosepine-surface/20 backdrop-blur-sm flex-col z-50 ring-2 ring-rosepine-dawn-rose dark:ring-rosepine-rose transform transition-transform -translate-x-full duration-1000"></div>
@@ -75,7 +75,7 @@
                 document.getElementById("author").textContent = `— ${random.author}`;
 
             }, 0);
-
+            
             setTimeout(() => {
                 quoteContainer.classList.replace("blur-2xl", "blur-none");
             }, 100);
