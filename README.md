@@ -1,4 +1,5 @@
 <p align="center">
+  <p>Notice: This project has been depricated in favor of starting from scratch with Svelte. New GitHub repo will be up soon at personal-website, the old repo for this.</p>
   <h1>Personal Website</h1>
   <p>Exactly what it says on the tin.</p>
   <p>-------------------------------</p>
