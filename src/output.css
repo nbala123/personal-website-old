@@ -38,7 +38,6 @@
     --color-rosepine-text: #e0def4;
     --color-rosepine-love: #eb6f92;
     --color-rosepine-rose: #ebbcba;
-    --color-rosepine-pine: #31748f;
     --color-rosepine-foam: #9ccfd8;
     --color-rosepine-iris: #c4a7e7;
     --color-rosepine-dawn-base: #faf4ed;
@@ -46,7 +45,6 @@
     --color-rosepine-dawn-overlay: #f2e9de;
     --color-rosepine-dawn-love: #b4637a;
     --color-rosepine-dawn-rose: #d7827e;
-    --color-rosepine-dawn-pine: #286983;
     --color-rosepine-dawn-foam: #56949f;
     --color-rosepine-dawn-iris: #907aa9;
   }
@@ -399,32 +397,8 @@
       background-color: color-mix(in oklab, var(--color-rosepine-dawn-base) 25%, transparent);
     }
   }
-  .bg-rosepine-dawn-base\/45 {
-    background-color: color-mix(in srgb, #faf4ed 45%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-rosepine-dawn-base) 45%, transparent);
-    }
-  }
   .bg-rosepine-dawn-surface {
     background-color: var(--color-rosepine-dawn-surface);
-  }
-  .bg-rosepine-dawn-surface\/0 {
-    background-color: color-mix(in srgb, #fffaf3 0%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-rosepine-dawn-surface) 0%, transparent);
-    }
-  }
-  .bg-rosepine-dawn-surface\/5 {
-    background-color: color-mix(in srgb, #fffaf3 5%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-rosepine-dawn-surface) 5%, transparent);
-    }
-  }
-  .bg-rosepine-dawn-surface\/10 {
-    background-color: color-mix(in srgb, #fffaf3 10%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-rosepine-dawn-surface) 10%, transparent);
-    }
   }
   .bg-rosepine-dawn-surface\/15 {
     background-color: color-mix(in srgb, #fffaf3 15%, transparent);
@@ -436,6 +410,15 @@
     background-color: color-mix(in srgb, #fffaf3 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-rosepine-dawn-surface) 20%, transparent);
+    }
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-white\/20 {
+    background-color: color-mix(in srgb, #fff 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
     }
   }
   .bg-gradient-to-r {
@@ -535,6 +518,15 @@
   .opacity-50 {
     opacity: 50%;
   }
+  .bg-blend-color {
+    background-blend-mode: color;
+  }
+  .bg-blend-difference {
+    background-blend-mode: difference;
+  }
+  .bg-blend-multiply {
+    background-blend-mode: multiply;
+  }
   .ring-2 {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -582,34 +574,14 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
-  .backdrop-blur-xs {
-    --tw-backdrop-blur: blur(var(--blur-xs));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .backdrop-brightness-200 {
-    --tw-backdrop-brightness: brightness(200%);
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
   .backdrop-saturate-150 {
     --tw-backdrop-saturate: saturate(150%);
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .backdrop-saturate-200 {
-    --tw-backdrop-saturate: saturate(200%);
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
   .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .transition-all {
     transition-property: all;
@@ -821,41 +793,9 @@
       }
     }
   }
-  .dark\:bg-rosepine-base\/65 {
-    &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, #191724 65%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-rosepine-base) 65%, transparent);
-      }
-    }
-  }
   .dark\:bg-rosepine-surface {
     &:where(.dark, .dark *) {
       background-color: var(--color-rosepine-surface);
-    }
-  }
-  .dark\:bg-rosepine-surface\/0 {
-    &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, #1f1d2e 0%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-rosepine-surface) 0%, transparent);
-      }
-    }
-  }
-  .dark\:bg-rosepine-surface\/10 {
-    &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, #1f1d2e 10%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-rosepine-surface) 10%, transparent);
-      }
-    }
-  }
-  .dark\:bg-rosepine-surface\/15 {
-    &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, #1f1d2e 15%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-rosepine-surface) 15%, transparent);
-      }
     }
   }
   .dark\:bg-rosepine-surface\/20 {
@@ -879,30 +819,6 @@
       background-color: color-mix(in srgb, #1f1d2e 30%, transparent);
       @supports (color: color-mix(in lab, red, red)) {
         background-color: color-mix(in oklab, var(--color-rosepine-surface) 30%, transparent);
-      }
-    }
-  }
-  .dark\:bg-rosepine-surface\/35 {
-    &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, #1f1d2e 35%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-rosepine-surface) 35%, transparent);
-      }
-    }
-  }
-  .dark\:bg-rosepine-surface\/40 {
-    &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, #1f1d2e 40%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-rosepine-surface) 40%, transparent);
-      }
-    }
-  }
-  .dark\:bg-rosepine-surface\/65 {
-    &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, #1f1d2e 65%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-rosepine-surface) 65%, transparent);
       }
     }
   }
@@ -949,20 +865,6 @@
     &:where(.dark, .dark *) {
       --tw-blur: blur(var(--blur-sm));
       filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-    }
-  }
-  .dark\:backdrop-blur-sm {
-    &:where(.dark, .dark *) {
-      --tw-backdrop-blur: blur(var(--blur-sm));
-      -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-      backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    }
-  }
-  .dark\:backdrop-blur-xs {
-    &:where(.dark, .dark *) {
-      --tw-backdrop-blur: blur(var(--blur-xs));
-      -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-      backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     }
   }
   .dark\:peer-checked\:bg-rosepine-love {
@@ -1186,6 +1088,9 @@
   -webkit-mask: linear-gradient(black, black) padding-box, linear-gradient(black, black) content-box;
   -webkit-mask-composite: xor;
   padding: 3px;
+}
+.animate-gradient {
+  animation: gradient 8s linear infinite;
 }
 ::-webkit-scrollbar {
   width: 12px;
